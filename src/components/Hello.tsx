@@ -6,9 +6,10 @@ export interface IProps {
   enthusiasmLevel?: number;
   onDecrement?: () => void;
   onIncrement?: () => void;
+  onIncrementAsync?: () => void;
 }
 
-function Hello({ enthusiasmLevel = 1, name, onDecrement, onIncrement }: IProps) {
+function Hello({ enthusiasmLevel = 1, name, onDecrement, onIncrement, onIncrementAsync }: IProps) {
   if (enthusiasmLevel <= 0) {
     throw new Error('You could be a little more enthusiastic. :D');
   }
@@ -21,6 +22,7 @@ function Hello({ enthusiasmLevel = 1, name, onDecrement, onIncrement }: IProps) 
       <div>
         <button onClick={onDecrement}>-</button>
         <button onClick={onIncrement}>+</button>
+        <button onClick={onIncrementAsync}>async +</button>
       </div>
     </div>
   );

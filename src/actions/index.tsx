@@ -8,6 +8,10 @@ export interface IIncrementEnthusiasm {
     type: constants.INCREMENT_ENTHUSIASM;
 }
 
+export interface IIncrementAsyncEnthusiasm {
+    type: constants.INCREMENT_ASYNC_ENTHUSIASM;
+}
+
 export type EnthusiasmAction = IIncrementEnthusiasm | IDecrementEnthusiasm;
 
 export function decrementEnthusiasm(): IDecrementEnthusiasm {
@@ -19,6 +23,12 @@ export function decrementEnthusiasm(): IDecrementEnthusiasm {
 export function incrementEnthusiasm(): IIncrementEnthusiasm {
     return {
         type: constants.INCREMENT_ENTHUSIASM
+    }
+}
+
+export function incrementAsyncEnthusiasm(): IIncrementAsyncEnthusiasm {
+    return {
+        type: constants.INCREMENT_ASYNC_ENTHUSIASM
     }
 }
 
