@@ -1,29 +1,21 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-
+import { StoreState } from './reducers';
 import { Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
+import AppRouter from './pages/appRouter';
 import createSagaMiddleware from 'redux-saga';
-import Hello from './containers/Hello';
-import { enthusiasm } from './reducers/index';
+import reducers from './reducers';
 import rootSaga from './sagas';
-import { IStoreState } from './types/index';
-
 import './index.css';
 
 const sagaMiddleware = createSagaMiddleware();
-const store = createStore<IStoreState>(enthusiasm, {
-  enthusiasmLevel: 1,
-  languageName: 'TypeScript',
-},
-  applyMiddleware(sagaMiddleware)
-);
-
+const store = createStore<StoreState>(reducers, applyMiddleware(sagaMiddleware));
 sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
   <Provider store={store}>
-    <Hello />
+    <AppRouter />
   </Provider>,
   document.getElementById('root') as HTMLElement
 );
