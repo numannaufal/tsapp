@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Provider, Store } from 'react-redux';
-import { StoreState } from '../reducers';
+import { StoreState } from '@src/reducers';
 import AppRouter from './appRouter';
 
 export interface AppProps {

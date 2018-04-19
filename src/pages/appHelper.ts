@@ -1,8 +1,8 @@
 import { Store } from 'react-redux';
-import ReactApp from '../utils/react/app';
-import ReduxSagaHelper from '../utils/react/reduxSagaHelper';
-import reducers, { StoreState } from '../reducers';
-import rootSaga from '../sagas';
+import ReactApp from '@libs/react/app';
+import ReduxSagaHelper from '@libs/react/reduxSagaHelper';
+import reducers, { StoreState } from '@src/reducers';
+import rootSaga from '@src/sagas';
 
 export default class AppHelper extends ReactApp {
   protected static instance: AppHelper;
