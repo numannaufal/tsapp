@@ -6,7 +6,7 @@ export interface StoreState {
   enthusiasm: EnthusiasmState;
 }
 
-const reducers = combineReducers<StoreState >({
+const reducers = combineReducers<StoreState>({
   enthusiasm
 });
 

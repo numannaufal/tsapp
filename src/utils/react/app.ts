@@ -1,20 +1,10 @@
 import * as ReactDOM from 'react-dom';
 
 export default class ReactApp {
-  protected static instance: ReactApp;
   protected reactComponent: JSX.Element;
   protected htmlElementToRender: HTMLElement;
 
-  protected static getInstance() {
-    if (this.instance === undefined) {
-      this.instance = new ReactApp();
-      return this.instance;
-    } else {
-      return this.instance;
-    }
-  }
-
-  public render(): void {
+  public render(props?: Function): void {
     ReactDOM.render(this.reactComponent, this.htmlElementToRender);    
   }
 
