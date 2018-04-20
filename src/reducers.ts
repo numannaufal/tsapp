@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
-import { enthusiasm } from './pages/home/hello/utils/reducer';
-import { EnthusiasmState } from './pages/home/hello/utils/reducer';
+import { EnthusiasmState, enthusiasm } from '@utils/enthusiasm/reducer';
 
 export interface StoreState {
   enthusiasm: EnthusiasmState;

@@ -1,15 +1,9 @@
 import * as React from 'react';
+import { EnthusiasmProps } from '@utils/enthusiasm/types';
 import './style.css';
 
-export interface Props {
-  name: string;
-  enthusiasmLevel?: number;
-  onDecrement?: () => void;
-  onIncrement?: () => void;
-  onIncrementAsync?: () => void;
-}
-
-function Hello({ enthusiasmLevel = 1, name, onDecrement, onIncrement, onIncrementAsync }: Props) {
+const Enthusiasm: React.StatelessComponent<EnthusiasmProps> = (props: EnthusiasmProps): JSX.Element => {
+  const { enthusiasmLevel = 1, name, onDecrement, onIncrement, onIncrementAsync } = props;
   if (enthusiasmLevel <= 0) {
     throw new Error('You could be a little more enthusiastic. :D');
   }
@@ -26,9 +20,9 @@ function Hello({ enthusiasmLevel = 1, name, onDecrement, onIncrement, onIncremen
       </div>
     </div>
   );
-}
+};
 
-export default Hello;
+export default Enthusiasm;
 
 // helpers
 
