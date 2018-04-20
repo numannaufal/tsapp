@@ -1,5 +1,5 @@
 import * as React from 'react';
-import EnthusiasmShell from '@utils/enthusiasm/shells/enthusiasm';
+import EnthusiasmShell from '@shared/enthusiasm/shells/enthusiasm';
 import Enthusiasm from './component';
 
 export default class EnthusiasmPage extends React.Component<{}> {

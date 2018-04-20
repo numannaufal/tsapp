@@ -1,6 +1,6 @@
 import { Store } from 'react-redux';
-import ReactApp from '@libs/react/app';
-import ReduxSagaHelper from '@libs/react/reduxSagaHelper';
+import ReactApp from '@libs/react';
+import ReduxSagaHelper from '@libs/reduxSaga';
 import reducers, { StoreState } from '@src/reducers';
 import rootSaga from '@src/sagas';
 

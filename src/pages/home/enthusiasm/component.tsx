@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { EnthusiasmProps } from '@utils/enthusiasm/types';
+import { EnthusiasmProps } from '@shared/enthusiasm/types';
 import './style.css';
 
 const Enthusiasm: React.StatelessComponent<EnthusiasmProps> = (props: EnthusiasmProps): JSX.Element => {

@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import { EnthusiasmState, enthusiasm } from '@utils/enthusiasm/reducer';
+import { EnthusiasmState, enthusiasm } from '@shared/enthusiasm/reducer';
 
 export interface StoreState {
   enthusiasm: EnthusiasmState;

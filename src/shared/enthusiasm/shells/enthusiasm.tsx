@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as actions from '@utils/enthusiasm/actions';
+import * as actions from '@shared/enthusiasm/actions';
 import { EnthusiasmProps, EnthusiasmShellProps } from '../types';
 import { StoreState } from '@src/reducers';
 import { connect, Dispatch } from 'react-redux';

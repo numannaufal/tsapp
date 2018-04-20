@@ -20,7 +20,7 @@
     "paths": {
       "@src/*": ["./*"],
       "@libs/*": ["./libs/*"],
-      "@utils/*": ["./utils/*"],
+      "@shared/*": ["./shared/*"],
       "@pages/*": ["./pages/*"]
     }
   },
